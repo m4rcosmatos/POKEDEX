@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    
+    <SearchBar @search_pokeName="getPokemons" />
     <PokeList :pokemons="pokemons" :text="text" v-show="!loading" />
     
   </div>
@@ -11,7 +11,8 @@
 import { defineComponent } from "vue";
 import Header from "./components/Header.vue";
 import PokeList from "./components/PokeList.vue";
-
+import SearchBar from "./components/SearchBar.vue";
+import { IEvolutionChain, IPokemon } from "./utils/interfaces";
 export default defineComponent({
   name: "App",
   methods: {
@@ -71,7 +72,7 @@ export default defineComponent({
   },
   components: {
     Header,
-    
+    SearchBar,
     PokeList,
     
   },
