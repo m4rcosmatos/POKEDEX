@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     
     
   </div>
@@ -7,6 +8,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Header from "./components/Header.vue";
 
 export default defineComponent({
   name: "App",
@@ -66,6 +68,7 @@ export default defineComponent({
     },
   },
   components: {
+    Header,
     
     
   },
