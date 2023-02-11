@@ -2,6 +2,7 @@
   <div>
     <Header />
     
+    <PokeList :pokemons="pokemons" :text="text" v-show="!loading" />
     
   </div>
 </template>
@@ -9,6 +10,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Header from "./components/Header.vue";
+import PokeList from "./components/PokeList.vue";
 
 export default defineComponent({
   name: "App",
@@ -70,6 +72,7 @@ export default defineComponent({
   components: {
     Header,
     
+    PokeList,
     
   },
   data() {
